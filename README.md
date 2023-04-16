@@ -110,9 +110,12 @@ plt.bar(x=["Right", "Wrong"], height=[ok, not_ok])
 plt.show()
 ```
 And if we plot it we get the following: 
-![rights](https://user-images.githubusercontent.com/91338053/232322861-76f9ef7a-67b1-48ed-a550-977c851cff3d.png)
+![rights](https://user-images.githubusercontent.com/91338053/232322861-76f9ef7a-67b1-48ed-a550-977c851cff3d.png)  
 As you can see it performs ok so not bad.  
 
 Now lets see how it does with the fake transactions.
-![wrongs](https://user-images.githubusercontent.com/91338053/232322896-1da9b6ea-1614-4e8a-870f-5de83a8d1885.png)
+![wrongs](https://user-images.githubusercontent.com/91338053/232322896-1da9b6ea-1614-4e8a-870f-5de83a8d1885.png)  
 As you can see not bad as well. Hey it's just an autoencoder an the criteria it is just a margin error we decide so not bad.
+
+## Ending
+I'm dying ok? so not too much time. It works somehow, not incredible but works. Can be more precise if you put the threshold error lower but you may get more error on real ones. Guess you can't have everything.  
