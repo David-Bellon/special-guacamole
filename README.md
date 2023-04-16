@@ -73,25 +73,6 @@ def train(input):
 
     return lost
 
-model = torch.load("autoencoder.pt")
-ok = 0
-not_ok = 0
-with torch.no_grad():
-    for (data, label) in fake_test:
-        out = model(data)
-        for i, value in enumerate(out):
-            if loss(value, data[i]) >= 0.75:
-                not_ok += 1
-            else:
-                ok += 1
-print(len(fake_test))
-print(ok)
-print(not_ok)
-
-plt.bar(x=["Right", "Wrong"], height=[ok, not_ok])
-plt.show()
-
-'''
 epochs = 20
 for epoch in range(epochs):
     epoch_loss = 0.0
@@ -101,6 +82,6 @@ for epoch in range(epochs):
     print(f"Epoch: {epoch} ---- Autoencoder Loss: {epoch_loss.item()/i}")
 
 torch.save(model, "autoencoder.pt")
-'''
+
 
 ```
